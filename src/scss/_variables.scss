@@ -1,0 +1,32 @@
+/* Colors */
+$color-bg: #f8f8f8;
+$color-white: #ffffff;
+$color-black: #1b1c21;
+$color-gray: #7e7e82;
+$color-accent: #41f6d7;
+
+/* Fonts */
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('../fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTLakes-Regular.woff') format('woff'),
+        url('../fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('../fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTLakes-Bold.woff') format('woff'),
+        url('../fonts/TTLakes-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+$font-main: 'TT Lakes', sans-serif;
+
+/* Size */
+$sidebar-width: 320px;
+$radius: 8px;
