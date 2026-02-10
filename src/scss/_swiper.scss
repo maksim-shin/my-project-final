@@ -1,16 +1,15 @@
 
 @use './variables' as *;
+
 .brands__container {    
     width: 100%;
-   
-    background-color: $color-bg;    
-}
+    height: 1000px;
+    background-color: #F8F8F8;
 
+}
 /* SWIPER */
 .swiper__container {
     width: 100%;
-     max-width: 100%;
-     overflow: hidden;
     height: auto;
 }
 
@@ -25,10 +24,11 @@
 
     display: flex;
     align-items: center;
-    background: linear-gradient(270deg, #F8F8F8 0%, $color-white 98.61%);
+    background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
 }
 
 .swiper__title--text {
+    font-family: $font-main;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -39,7 +39,9 @@
 
 /* Swiper slide box */
 .swiper-wrapper {
-  margin-bottom: 36px; 
+  margin-bottom: 36px;
+
+  
 }
 
 .swiper-slide {
@@ -63,9 +65,8 @@ justify-content: center;
 
 
 .toggle--btn {
-    width: 134px;
     height: 24px;
-    font-family: 'TT Lakes', sans-serif;
+    font-family: $font-main;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
@@ -75,6 +76,8 @@ justify-content: center;
     margin-left: 24px;
     gap: 8px;
     align-items: center;
+    display: flex;
+    justify-content: flex-start;
 }
 
 
@@ -89,11 +92,9 @@ justify-content: center;
 }
 @media (min-width: 768px) {
 
-  .wrapper__container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
+  .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     margin-left: 16px;
 
@@ -110,16 +111,11 @@ justify-content: center;
     display: none;
   }
 
-  .toggle--btn {
-    display: flex;
-  }
+
 }
-
+  
 /* DESKTOP */
-@media (min-width: 1024px) {
-  .brands__container{
-
-  }
+@media (min-width: 1366px) {
   .swiper-wrapper {
     grid-template-columns: repeat(4, 1fr);
   }

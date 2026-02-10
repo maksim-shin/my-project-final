@@ -54,8 +54,5 @@
     "plugins": {
       "autoprefixer": {}
     }
-  },
-  "dependencies": {
-    "swiper": "^12.1.0"
   }
 }

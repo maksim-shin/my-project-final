@@ -1,9 +1,5 @@
-import Swiper from 'swiper';
-import { Pagination } from 'swiper/modules';
 
-import '../scss/style.scss';
-import 'swiper/css';
-import 'swiper/css/pagination';
+import '../scss/style.scss';  
 
 /* =========================
    BURGER MENU
@@ -30,58 +26,66 @@ if (overlay) {
 /* =========================
    SWIPER
 ========================= */
-
 const toggleBtn = document.getElementById('toggleBtn');
 const wrapper = document.querySelector('.swiper-wrapper');
-
 let swiperInstance = null;
 
 function initSwiper() {
-  const swiperEl = document.querySelector('.swiper');
-
-  if (!swiperEl || swiperInstance) return;
-
-  swiperInstance = new Swiper(swiperEl, {
-    modules: [Pagination],
-    slidesPerView: 'auto',
-    spaceBetween: 16,
-    centeredSlides: true,
-
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
-
-  console.log('Swiper INIT');
+  if (!swiperInstance && window.Swiper) {
+    swiperInstance = new window.Swiper('.swiper', {
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      spaceBetween: 16,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  }
 }
 
 function destroySwiper() {
-  if (swiperInstance) {
+  if (swiperInstance && typeof swiperInstance.destroy === 'function') {
     swiperInstance.destroy(true, true);
     swiperInstance = null;
-    console.log('Swiper DESTROY');
   }
 }
 
-function updateLayout() {
+if (window.innerWidth < 768) {
+  initSwiper();
+  toggleBtn.style.display = 'none';
+  wrapper.classList.remove('is-open');
+} else {
+  destroySwiper();
+  toggleBtn.style.display = wrapper.scrollHeight > wrapper.clientHeight ? 'flex' : 'none';
+}
+
+window.addEventListener('resize', () => {
   if (window.innerWidth < 768) {
     initSwiper();
+    toggleBtn.style.display = 'none';
+    wrapper.classList.remove('is-open');
   } else {
     destroySwiper();
+    toggleBtn.style.display = wrapper.scrollHeight > wrapper.clientHeight ? 'flex' : 'none';
   }
-}
+});
 
-/* =========================
-   TOGGLE BUTTON
-========================= */
+toggleBtn.addEventListener('click', () => {
+  const label = toggleBtn.querySelector('span');
 
-if (toggleBtn && wrapper) {
-  toggleBtn.addEventListener('click', () => {
-    wrapper.classList.toggle('is-open');
+  if (!label) {
+    // Если span нет, обернём текст
+    toggleBtn.innerHTML = '<img src="./brands_logo/expand.svg" alt=""><span>Показать все</span>';
+  }
 
-    toggleBtn.innerHTML = wrapper.classList.contains('is-open')
-      ? '<img src="./brands_logo/expand.svg" alt="">Скрыть'
-      : '<img src="./brands_logo/expand.svg" alt="">Показать все';
-  });
-}
+  const span = toggleBtn.querySelector('span');
+
+  if (wrapper.classList.contains('is-open')) {
+    wrapper.classList.remove('is-open');
+    span.textContent = 'Показать все';
+  } else {
+    wrapper.classList.add('is-open');
+    span.textContent = 'Скрыть';
+  }
+});

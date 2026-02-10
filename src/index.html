@@ -7,10 +7,12 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-
+<div class="main__page">
     <!-- SIDE MENU PANEL -->
      <nav class="modal__navigation modal__navigation-active">
 
@@ -220,53 +222,18 @@
 
             <div class="swiper-pagination"></div>
 
-            <button id="toggleBtn" class="toggle--btn"><img src="./brands_logo/expand.svg" alt="">Показать все</button>
+            <button id="toggleBtn" class="toggle--btn">
+                <img src="./img/brands_logo/expand.svg" alt="">
+                <span>Показать все</span>
+            </button>
+        </div>
+
         
-        </div>
-
-
-        </div>
-
-        <div class="brands__container">
-                <!-- Slider main container -->
-                <div class="swiper swiper__container">
-
-                <div class="swiper__title__container">
-                    <h2 class="swiper__title--text">РЕМОНТ ТЕХНИКИ РAЗЛИЧНЫХ БРЕНДОВ</h2>
-                </div>
-
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper wrapper__container">
-                <!-- Slides -->
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat1.png" alt=""></div>
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat2.png" alt=""></div>
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat3.png" alt=""></div>
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat4.png" alt=""></div>
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat5.png" alt=""></div>
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat6.png" alt=""></div>
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat7.png" alt=""></div>
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat8.png" alt=""></div>
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat1.png" alt=""></div>
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat2.png" alt=""></div>
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat3.png" alt=""></div>
-                
-                </div>
-
-            <div class="swiper-pagination"></div>
-
-            <button id="toggleBtn" class="toggle--btn"><img src="./brands_logo/expand.svg" alt="">Показать все</button>
-        
-        </div>
-
-
-        </div>
     </main>
 
-   
+   </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
-    <script src="swiper.js"></script>
-    <link rel="stylesheet" href="swiper.css">
-
+    
   </body>
 </html>
