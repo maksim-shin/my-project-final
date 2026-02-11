@@ -71,6 +71,7 @@ window.addEventListener('resize', () => {
   }
 });
 
+
 toggleBtn.addEventListener('click', () => {
   const label = toggleBtn.querySelector('span');
 

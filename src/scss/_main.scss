@@ -182,8 +182,10 @@
     display: flex;
     width: 132px;
     height: 24px;
-    margin: 16px;
+    margin: 12px 8px;
     border: none;
+    font-family: $font-main;
+    font-size: 16px;
     background: none;
     justify-content: center;
     align-items: center;
@@ -267,16 +269,15 @@
 @media (min-width: 1366px) {
 
    
-    // .main__page {
-    //     display: inline-flex; 
-    //     width: 100%;
-    //     max-width: 1440px;
-    //     margin: 0 auto;
-    //     padding: 0 16px;
-    // }
+    .main__page {
+        display: inline-flex; 
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0;
+    }
     
     .modal__navigation {
-    position: sticky;
     top: 0;
     left: 0;
     width: 320px; 
@@ -285,6 +286,7 @@
     transform: none;
     z-index: 1000;
     box-shadow: none;
+    display: flex;
     
   }
   .navigation__button--hide {
