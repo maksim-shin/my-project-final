@@ -44,7 +44,7 @@
   
 }
 
-.swiper-slide {
+.swiper-slide.brands-item {
   width: 240px;
   height: 72px;
 
@@ -88,11 +88,12 @@ justify-content: center;
     display: flex;
     max-height: none;
     overflow: visible;
+    gap: 16px;
   }
 }
 @media (min-width: 768px) {
 
-  .swiper-wrapper {
+  .swiper-wrapper.wrapper__brands {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
@@ -117,6 +118,6 @@ justify-content: center;
 /* DESKTOP */
 @media (min-width: 1366px) {
   .swiper-wrapper {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr) !important;
   }
 }

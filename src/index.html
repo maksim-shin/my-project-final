@@ -78,11 +78,11 @@
             </div>
 
             <div class="company__mail">
-                <a class="company__mail--adress" href="mailto:mail@cps.com" class="company__email">mail@cps.com</a>
+                <a class="company__mail--adress" href="mailto:mail@cps.com">mail@cps.com</a>
             </div>
 
             <div class="company__phone">
-                <a class="company__phone--number" href="tel:+88008908900" class="company__phone">8 800 890 89 00</a>
+                <a class="company__phone--number" href="tel:+88008908900">8 800 890 89 00</a>
             </div>
             
 
@@ -175,19 +175,22 @@
             </nav>
             
             
-            <!-- Services content -->
+            <!-- HERO Services content -->
                 <div class="services__content">
 
-                    <div class="services__text">
-                        <p class="services__text--paragraph--1">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-                        <p class="services__text--paragraph--2">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+                    <div id="content__text" class="services__text">
+                        <p class="services__text-short">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+                        <p class="services__text-full">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias sapiente saepe quo quod minus esse dolores quidem ducimus aspernatur amet vero ut incidunt facere, blanditiis inventore magnam perspiciatis suscipit itaque?
+                        Ut optio inventore ipsa sunt eaque eligendi distinctio ratione ab deleniti sed consequuntur perspiciatis minima corporis ipsum quis vel mollitia magni fuga, assumenda aut veritatis! Veniam suscipit cumque quibusdam deserunt?
+                        Harum sequi aspernatur quod blanditiis ut enim tempora soluta deserunt. Repellat, aliquid dolore architecto officia reprehenderit ab perferendis aperiam praesentium mollitia excepturi veritatis at doloribus possimus, placeat eos nesciunt? Beatae!
+                        Dignissimos magni officiis ullam possimus. Velit deleniti, voluptates repellat laboriosam dolorum vel aliquam incidunt natus autem quas eligendi voluptatibus itaque, at ducimus distinctio similique doloremque, enim aspernatur a. Quibusdam, incidunt!
+                        Aperiam dolorum ducimus voluptates amet ratione, quibusdam ex recusandae, consequuntur facere molestiae eius necessitatibus porro, veniam aspernatur iste itaque rem beatae? Debitis consequatur cum ducimus ex sit necessitatibus eligendi saepe.</p>
 
-                        
-                        
-                        <button class="services__button--read--more">
-                            <img class="services__button--icon" src="img/ic/expand.svg" alt="">
-                            Читать далее
-                        </button>
+                    <button  data-target="content__text" class="toggle--btn" data-text-show="Читать далее" data-text-hide="Свернуть">
+                        <img src="./img/brands_logo/expand.svg" alt="">
+                        <span class="read__more">Читать далее</span>
+                    </button>    
+
                     </div>
 
                     <div class="services__content__image">
@@ -198,7 +201,7 @@
 
 
         <div class="brands__container">
-                <!-- Slider main container -->
+                <!-- Slider 1 main container -->
                 <div class="swiper swiper__container">
 
                 <div class="swiper__title__container">
@@ -206,29 +209,56 @@
                 </div>
 
                 <!-- Additional required wrapper -->
-                <div class="swiper-wrapper wrapper__container">
+                <div id="brands" class="swiper-wrapper wrapper__brands">
                 <!-- Slides -->
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat1.png" alt=""></div>
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat2.png" alt=""></div>
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat3.png" alt=""></div>
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat4.png" alt=""></div>
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat5.png" alt=""></div>
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat6.png" alt=""></div>
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat7.png" alt=""></div>
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat8.png" alt=""></div>
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat1.png" alt=""></div>
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat2.png" alt=""></div>
-                    <div class="swiper-slide slide__element"><img src="img/brands_logo/cat3.png" alt=""></div>
+                    <div class="swiper-slide brands-item"><img src="img/brands_logo/cat1.png" alt=""></div>
+                    <div class="swiper-slide brands-item"><img src="img/brands_logo/cat2.png" alt=""></div>
+                    <div class="swiper-slide brands-item"><img src="img/brands_logo/cat3.png" alt=""></div>
+                    <div class="swiper-slide brands-item"><img src="img/brands_logo/cat4.png" alt=""></div>
+                    <div class="swiper-slide brands-item"><img src="img/brands_logo/cat5.png" alt=""></div>
+                    <div class="swiper-slide brands-item"><img src="img/brands_logo/cat6.png" alt=""></div>
+                    <div class="swiper-slide brands-item"><img src="img/brands_logo/cat7.png" alt=""></div>
+                    <div class="swiper-slide brands-item"><img src="img/brands_logo/cat8.png" alt=""></div>
+                    <div class="swiper-slide brands-item"><img src="img/brands_logo/cat1.png" alt=""></div>
+                    <div class="swiper-slide brands-item"><img src="img/brands_logo/cat2.png" alt=""></div>
+                    <div class="swiper-slide brands-item"><img src="img/brands_logo/cat3.png" alt=""></div>
                 
                 </div>
 
             <div class="swiper-pagination"></div>
 
-            <button id="toggleBtn" class="toggle--btn">
+            <button data-target="brands" class="toggle--btn" data-text-show="Показать все" data-text-hide="Скрыть">
                 <img src="./img/brands_logo/expand.svg" alt="">
                 <span>Показать все</span>
             </button>
         </div>
+
+
+        <div class="equipment__container">
+        <!-- Slider 2 main container -->
+        <div class="swiper swiper__container">
+
+        <div class="swiper__title__container">
+            <h2 class="swiper__title--text">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</h2>
+        </div>
+
+        <!-- Additional required wrapper -->
+        <div id="equipment" class="swiper-wrapper wrapper__equipment">
+        <!-- Slides -->
+            <div class="swiper-slide equipment-item"><img class="swiper__2--img" src="./img/brands_logo/go.svg" alt="">Ремонт ноутбуков</div>
+            <div class="swiper-slide equipment-item"><img class="swiper__2--img" src="./img/brands_logo/go.svg" alt="">Ремонт планшетов</div>
+            <div class="swiper-slide equipment-item"><img class="swiper__2--img" src="./img/brands_logo/go.svg" alt="">Ремонт ПК</div>
+            <div class="swiper-slide equipment-item"><img class="swiper__2--img" src="./img/brands_logo/go.svg" alt="">Ремонт мониторов</div>
+        
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+            <button  data-target="equipment" class="toggle--btn" data-text-show="Показать все" data-text-hide="Скрыть">
+                <img src="./img/brands_logo/expand.svg" alt="">
+                <span class="show__more__equipment">Показать все</span>
+            </button>    
+    </div>
 
         
     </main>
